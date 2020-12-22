@@ -235,10 +235,16 @@ dex_import {
 	jars: ["proprietary/framework/WfdCommon.jar"],
 }
 
+cc_prebuilt_binary {
+	name: "chargeonlymode",
+	owner: "xiaomi",
+	srcs: ["proprietary/bin/chargeonlymode"],
+	prefer: true,
+}
+
 dex_import {
 	name: "vendor.qti.hardware.soter-V1.0-java",
 	owner: "xiaomi",
 	jars: ["proprietary/product/framework/vendor.qti.hardware.soter-V1.0-java.jar"],
 	product_specific: true,
 }
-
